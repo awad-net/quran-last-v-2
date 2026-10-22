@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:local="clr-namespace:Quran;assembly=Quran"
+             x:Class="Quran.playdownloaded">
+     <ContentPage.ToolbarItems BarBackgroundColor="0E8192" >
+                <ToolbarItem  Text="اقراءة القرآن"/>
+        <ToolbarItem  Icon="list.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout x:Name="StackLayoutMap" Margin="20" >
+                        <Label Font="ArbFONTS-Al-QuranAlKareem " HorizontalTextAlignment="Center" FontSize="15"  x:Name="suraname"/>
+                        <Label Font="ArbFONTS-Al-QuranAlKareem " HorizontalTextAlignment="Center" FontSize="15" x:Name="surat"></Label>
+                    </StackLayout>
+
+
+
+
+
+                    <RelativeLayout>
+                        <Button  Clicked="playsura" x:Name="pl" Image="play.png"  HorizontalOptions="Start" BackgroundColor="Transparent" WidthRequest="50" HeightRequest="50"
+                        RelativeLayout.XConstraint =
+   "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.35}"
+                        RelativeLayout.YConstraint =
+   "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7}">
+                        </Button>
+
+                        <Button  Clicked="stopsura"  x:Name="paus" Image="stop.png"  HorizontalOptions="Start" BackgroundColor="Transparent" WidthRequest="50" HeightRequest="50"
+                       RelativeLayout.XConstraint =
+   "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.6}"
+                     RelativeLayout.YConstraint =
+   "{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.7}">
+                        </Button>
+                    </RelativeLayout>
+
+                </StackLayout>
+            </ScrollView>
+            <local:AdBanner HeightRequest="62" BackgroundColor="White" Size="Standardbanner" VerticalOptions="EndAndExpand"/>
+
+        </StackLayout>
+      
+    </ContentPage.Content>
+</ContentPage>

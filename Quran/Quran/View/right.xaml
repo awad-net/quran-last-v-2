@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<slideoverkit:SlideMenuView
+    xmlns:slideoverkit="clr-namespace:SlideOverKit;assembly=SlideOverKit"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quran.right">
+    <ScrollView >
+        <Grid BackgroundColor="#2C7648">
+                    <Grid.RowDefinitions>
+            <RowDefinition Height="15" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+            <RowDefinition Height="80" />
+           
+
+        </Grid.RowDefinitions>
+
+            <StackLayout Grid.Row="3">
+                <Image  x:Name="sah"  HeightRequest="40" WidthRequest="40" Source="quran.png" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button  BackgroundColor="Transparent"   TextColor="White" Clicked="nav" Text="الشيوخ"></Button>
+            </StackLayout>
+            <StackLayout Grid.Row="4">
+                <Image HeightRequest="40" WidthRequest="40"  Source="man.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button   BackgroundColor="Transparent"     TextColor="White" Clicked="nav" Text="التنزيلات"></Button>
+            </StackLayout>
+            <StackLayout Grid.Row="5">
+                <Image   HeightRequest="40" WidthRequest="40" Source="islam.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button    BackgroundColor="Transparent"     TextColor="White" Clicked="nav" Text="الاذكار"></Button>
+
+            </StackLayout> 
+            <StackLayout Grid.Row="6">
+                <Image  HeightRequest="40" WidthRequest="40" Source="Group277.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button     BackgroundColor="Transparent"  TextColor="White" Clicked="nav" Text="القبله"></Button>
+            </StackLayout> 
+            <StackLayout Grid.Row="7">
+
+                <Image HeightRequest="40" WidthRequest="40" Source="tasbih.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button     BackgroundColor="Transparent"  TextColor="White" Clicked="nav" Text="السبحة"></Button>
+
+            </StackLayout> 
+            <StackLayout Grid.Row="8">
+                <Image  HeightRequest="40" WidthRequest="40" Source="info.png">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Button     BackgroundColor="Transparent"  TextColor="White" Clicked="nav" Text="إعدادات الأذان"></Button>
+
+            </StackLayout>    
+
+         </Grid>
+
+    </ScrollView>
+
+</slideoverkit:SlideMenuView>

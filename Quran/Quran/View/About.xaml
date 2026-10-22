@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                            xmlns:local="clr-namespace:Quran;assembly=Quran"
+
+             x:Class="Quran.About" BackgroundColor="White"
+             
+           
+             
+             >
+     <ContentPage.ToolbarItems BarBackgroundColor="0E8192" >
+                <ToolbarItem  Text="الإعدادات"/>
+        <ToolbarItem  Icon="list.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <TableView x:Name="table" HasUnevenRows="True" BackgroundColor="White" Margin="5,0,5,0" AbsoluteLayout.LayoutBounds="1,1,1,0.855" AbsoluteLayout.LayoutFlags="All" >
+                    <TableView.Root >
+
+                        <TableSection x:Name="notification" Title="تفعيل الأذان" >
+
+                            <ViewCell  >
+                                <ViewCell.View>
+                                    <StackLayout  Padding="10" Orientation="Horizontal">
+                                        <Image  HeightRequest="30" WidthRequest="30" Source="notification.png" ></Image>
+                                        <Label x:Name="switchlocation1" FontSize="20" TextColor="#78807C" Text="الفجر" ></Label>
+                                        <Switch Toggled="Switch_fajr" x:Name="switch1" OnColor="#329126" BackgroundColor="White" ThumbColor="White"  HorizontalOptions="EndAndExpand" ></Switch>
+                                    </StackLayout>
+
+
+
+                                </ViewCell.View>
+                            </ViewCell>
+                            <ViewCell  >
+                                <ViewCell.View>
+                                    <StackLayout  Padding="10" Orientation="Horizontal">
+                                        <Image  HeightRequest="30" WidthRequest="30" Source="notification.png" ></Image>
+                                        <Label x:Name="switchlocation2" FontSize="20" TextColor="#78807C" Text="الظهر" ></Label>
+                                        <Switch Toggled="Switch_duhr" x:Name="switch2" OnColor="#329126" BackgroundColor="White" ThumbColor="White"  HorizontalOptions="EndAndExpand" ></Switch>
+                                    </StackLayout>
+
+
+
+                                </ViewCell.View>
+                            </ViewCell>
+                            <ViewCell  >
+                                <ViewCell.View>
+                                    <StackLayout  Padding="10" Orientation="Horizontal">
+                                        <Image  HeightRequest="30" WidthRequest="30" Source="notification.png" ></Image>
+                                        <Label x:Name="switchlocation3" FontSize="20" TextColor="#78807C" Text="العصر" ></Label>
+                                        <Switch Toggled="Switch_asr" x:Name="switch3" OnColor="#329126" BackgroundColor="White" ThumbColor="White"  HorizontalOptions="EndAndExpand" ></Switch>
+                                    </StackLayout>
+
+
+
+                                </ViewCell.View>
+                            </ViewCell>
+                            <ViewCell  >
+                                <ViewCell.View>
+                                    <StackLayout  Padding="10" Orientation="Horizontal">
+                                        <Image  HeightRequest="30" WidthRequest="30" Source="notification.png" ></Image>
+                                        <Label x:Name="switchlocation4" FontSize="20" TextColor="#78807C" Text="المغرب" ></Label>
+                                        <Switch Toggled="Switch_maghreb" x:Name="switch4" OnColor="#329126" BackgroundColor="White" ThumbColor="White"  HorizontalOptions="EndAndExpand" ></Switch>
+                                    </StackLayout>
+
+
+
+                                </ViewCell.View>
+                            </ViewCell>
+                            <ViewCell  >
+                                <ViewCell.View>
+                                    <StackLayout  Padding="10" Orientation="Horizontal">
+                                        <Image  HeightRequest="30" WidthRequest="30" Source="notification.png" ></Image>
+                                        <Label x:Name="switchlocation5" FontSize="20" TextColor="#78807C" Text="العشاء" ></Label>
+                                        <Switch Toggled="Switch_isha" x:Name="switch5" OnColor="#329126" BackgroundColor="White" ThumbColor="White"  HorizontalOptions="EndAndExpand" ></Switch>
+                                    </StackLayout>
+
+
+
+                                </ViewCell.View>
+                            </ViewCell>
+                            <ViewCell Tapped="ViewCell_Tapped" >
+                                <ViewCell.View>
+                                    <StackLayout  Padding="10" Orientation="Horizontal">
+                                        <Label Margin="10,0,0,0" TextColor="DarkGreen" FontSize="20"  Text="تقيم التطبيق" ></Label>
+                                    </StackLayout>
+
+
+
+                                </ViewCell.View>
+                            </ViewCell>
+                        </TableSection>
+
+                    </TableView.Root>
+                </TableView>
+            </StackLayout>
+            <local:AdBanner HeightRequest="62" BackgroundColor="White" Size="Standardbanner" VerticalOptions="EndAndExpand"/>
+
+        </StackLayout>
+       
+    </ContentPage.Content>
+</ContentPage>

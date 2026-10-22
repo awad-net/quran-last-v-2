@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{89B8B2D9-FE96-41A1-8948-BC0A5FA139C8}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Quran.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Quran.iOS</AssemblyName>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <ProvisioningType>automatic</ProvisioningType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <IpaIncludeArtwork>
+    </IpaIncludeArtwork>
+    <CodesignKey>iPhone Developer: sayed nageh (LWHM7J282D)</CodesignKey>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+    <CodesignEntitlements />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>Apple Development: sayed nageh (LWHM7J282D)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>
+    </CodesignEntitlements>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer: sayed nageh (LWHM7J282D)</CodesignKey>
+    <CodesignEntitlements>
+    </CodesignEntitlements>
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="EmptyClassios.cs" />
+    <Compile Include="LongRunning.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="NetworkConnection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quran.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="QuranDB.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="Download.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="downloadDB.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <Compile Include="PageImpInterfaceRendereiOS.cs" />
+    <None Include="MADDINA.ttf" />
+    <None Include="mcs_gf1.ttf" />
+    <None Include="quran-simple.xml" />
+    <None Include="quran.xml" />
+    <Compile Include="wclient.cs" />
+    <None Include="ReemKufi-Regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\icon-1.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\LaunchImage-1.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Plugin.Compass">
+      <Version>3.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.MediaManager">
+      <Version>0.9.8-alpha1</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.Permissions">
+      <Version>6.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl">
+      <Version>1.5.231</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle">
+      <Version>3.1.1.1-beta</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials">
+      <Version>1.5.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Crosslight.Xamarin.Build.Download">
+      <Version>25.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.DownloadManager">
+      <Version>1.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>4.6.0.616-pre4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Quran\Quran.csproj">
+      <Project>{88317C7F-1A8F-4C83-9BB0-4EADE26B2E1C}</Project>
+      <Name>Quran</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="abdulbasitabdulsamad.jpg" />
+    <BundleResource Include="abubakr.jpg" />
+    <BundleResource Include="azkarback.jpg" />
+    <BundleResource Include="elballloushi.jpg" />
+    <BundleResource Include="elballoushy.jpg" />
+    <BundleResource Include="eldoukali.jpg" />
+    <BundleResource Include="fawaz.jpg" />
+    <BundleResource Include="Group277.png" />
+    <BundleResource Include="hatem.jpg" />
+    <BundleResource Include="info.png" />
+    <BundleResource Include="islam.png" />
+    <BundleResource Include="list.png" />
+    <BundleResource Include="maher.jpg" />
+    <BundleResource Include="man.png" />
+    <BundleResource Include="mashari.jpg" />
+    <BundleResource Include="mosque.png" />
+    <BundleResource Include="nasser.jpg" />
+    <BundleResource Include="pause.png" />
+    <BundleResource Include="play.png" />
+    <BundleResource Include="prev.png" />
+    <BundleResource Include="qibla.png" />
+    <BundleResource Include="quran.png" />
+    <BundleResource Include="saad.jpg" />
+    <BundleResource Include="skip.png" />
+    <BundleResource Include="splashscreen.png" />
+    <BundleResource Include="stop.png" />
+    <BundleResource Include="tasbih.png" />
+    <BundleResource Include="yassin.jpg" />
+    <BundleResource Include="mawakit.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="bedtime.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="carpet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="dawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="AzkarHosanAlMoslam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="night.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Tasbihback.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Ellipse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Tasbihback.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="addTas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="btnBack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="btnDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Sabhabackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="incress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="decrease.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="qibla1.png" />
+  </ItemGroup>
+</Project>

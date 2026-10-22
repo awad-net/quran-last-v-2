@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Quran"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="Quran.MainPage"
+             Padding="5"
+             >
+     <ContentPage.ToolbarItems BarBackgroundColor="0E8192" >
+                
+        </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+
+            <CollectionView x:Name="Cshaiekhlst" EmptyView="لايوجد عناصر " SelectionMode="Single" SelectionChanged="Cshaiekhlst_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout  Orientation="Vertical" VerticalItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                        
+                            <Frame  CornerRadius="0"  VerticalOptions="Center"  HeightRequest="60" HasShadow="True">
+
+                                <Grid >
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="60"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="100"/>
+                                    </Grid.ColumnDefinitions>
+                                    <controls:CircleImage Source="{Binding img}" Aspect="AspectFill" Grid.Column="1">
+                                        <controls:CircleImage.WidthRequest>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="Android, iOS">50</On>
+                                                <On Platform="WinPhone">50</On>
+                                            </OnPlatform>
+                                        </controls:CircleImage.WidthRequest>
+                                        <controls:CircleImage.HeightRequest>
+                                            <OnPlatform x:TypeArguments="x:Double">
+                                                <On Platform="Android, iOS">50</On>
+                                                <On Platform="WinPhone">50</On>
+                                            </OnPlatform>
+                                        </controls:CircleImage.HeightRequest>
+                                    </controls:CircleImage>
+
+                                    <Label Text="{Binding name}" VerticalOptions="Center" FontSize="20" TextColor="Black" Grid.Column="0" VerticalTextAlignment="Center"/>
+                                </Grid>
+                            </Frame>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+           
+        </AbsoluteLayout>
+
+    </ContentPage.Content>
+</ContentPage>

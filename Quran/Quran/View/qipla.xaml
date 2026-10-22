@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:local="clr-namespace:Quran;assembly=Quran"
+             x:Class="Quran.qipla" BackgroundImage="mawakit.jpg">
+     <ContentPage.ToolbarItems BarBackgroundColor="0E8192" >
+                <ToolbarItem  Text="القبلة"/>
+        <ToolbarItem  Icon="list.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <AbsoluteLayout >
+                <Image x:Name="qiblaxx" Source="qibla1.png" AbsoluteLayout.LayoutBounds="0.5,0.5,0.5,0.5" AbsoluteLayout.LayoutFlags="All" >
+
+                </Image>
+            </AbsoluteLayout>
+            <local:AdBanner HeightRequest="62" BackgroundColor="White" Size="Standardbanner" VerticalOptions="EndAndExpand"/>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                            xmlns:local="clr-namespace:Quran;assembly=Quran"
+
+             mc:Ignorable="d"
+              BackgroundColor="#3B4077"
+             x:Class="Quran.View.AddSabhaPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid BackgroundColor="#2EA15A"  IsVisible="True" VerticalOptions="Start" Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="١٩ رمضان ١٤٣٩ه" x:Name="lbldateHajre" FontSize="12" FontFamily="{StaticResource ArbFONTS2Bold}" TextColor="White" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="٢٥ يوليو ٢٠١٩م" x:Name="lbldate" FontSize="12" FontFamily="{StaticResource ArbFONTS2Bold}" TextColor="White" Grid.Row="1" Grid.Column="1"/>
+                <Label Text="19 Ramadan 1439" x:Name="lbldateHajreE" FontSize="12" FontFamily="{StaticResource ArbFONTS2Bold}" TextColor="White" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="25 July 2019" FontSize="12" x:Name="lbldateE" FontFamily="{StaticResource ArbFONTS2Bold}" TextColor="White" Grid.Row="1" Grid.Column="0"/>
+
+            </Grid>
+            <StackLayout  x:Name="AddItem" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" >
+                <Entry PlaceholderColor="White" TextColor="White"  Placeholder="اضافة كلمة" FontSize="15" x:Name="entryAdd"  WidthRequest="250"  VerticalOptions="Center" HorizontalOptions="Center" />
+
+
+                <Button  BorderColor="#03A841" BackgroundColor="White"  BorderWidth="2" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="250" CornerRadius="20" TextColor="#03A841" Text="اضافة كلمة" Clicked="btnAdditem_Clicked" FontFamily="{StaticResource ArbFONTS1}" x:Name="btnAdditem"/>
+              
+            </StackLayout>
+            <local:AdBanner HeightRequest="62" BackgroundColor="White" Size="Standardbanner" VerticalOptions="EndAndExpand"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

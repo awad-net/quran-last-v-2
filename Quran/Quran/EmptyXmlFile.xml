@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quran.playquran">
+    <ContentPage.ToolbarItems BarBackgroundColor="0E8192" >
+                <ToolbarItem  Text="استماع للقرىن الكريم"/>
+        <ToolbarItem  Icon="list.png"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+                <StackLayout>
+            <Label  HorizontalOptions="Center" x:Name="prog" ></Label>
+            <ProgressBar x:Name="progressBar" Progress="0.0"></ProgressBar>
+            <Button Text="Download" Image="prev.png"  HorizontalOptions="Start" Clicked="down"></Button>
+
+              <ListView ItemTapped="itemtapped" x:Name="mylistview">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Appearing="Cell_OnAppearing">
+                                <ViewCell.ContextActions>
+                                    <MenuItem Clicked="pquran" CommandParameter="{Binding .}"
+               Text="سماع" />
+                                    <MenuItem Clicked="dquran" CommandParameter="{Binding .}"
+               Text="تحميل" IsDestructive="True" />
+                                    <MenuItem Clicked="rquran" CommandParameter="{Binding .}"
+               Text="قراءة" IsDestructive="True" />
+
+                                </ViewCell.ContextActions>
+                                <StackLayout BackgroundColor="#eee"
+                        Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                                          <Label TextColor="White" FontSize="30" Margin="10" Text="{Binding id}"
+                                 />
+                                  <Label TextColor="White" FontSize="30"  Margin="10" Text="{Binding name}"
+                                HorizontalOptions="EndAndExpand"
+                                 />
+                  
+
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <RelativeLayout>
+            <Button Clicked="prevsura" x:Name="prev" Image="prev.png"  HorizontalOptions="Start" BackgroundColor="Transparent" WidthRequest="50" HeightRequest="50"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=
+                RelativeToParent,
+                             Property=Height,
+                             Factor=0.8,
+                             }"
+                         RelativeLayout.XConstraint =
+   "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.0}">
+
+            </Button>
+            <Button  Clicked="playsura" x:Name="play" Image="play.png"  HorizontalOptions="Start" BackgroundColor="Transparent" WidthRequest="50" HeightRequest="50"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=
+                RelativeToParent,
+                             Property=Height,
+                             Factor=0.8,
+                             }"
+                         RelativeLayout.XConstraint =
+   "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.25}">
+
+            </Button>
+            <Button  Clicked="stopsura"  x:Name="stop" Image="stop.png"  HorizontalOptions="Start" BackgroundColor="Transparent" WidthRequest="50" HeightRequest="50"
+  RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=
+                RelativeToParent,
+                             Property=Height,
+                             Factor=0.8,
+                             }"
+                       RelativeLayout.XConstraint =
+   "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.50}">
+
+            </Button>
+            <Button Clicked="nextsura" x:Name="next" Image="skip.png"  HorizontalOptions="Start" BackgroundColor="Transparent" WidthRequest="50" HeightRequest="50"
+    RelativeLayout.YConstraint =
+      "{ConstraintExpression Type=
+                RelativeToParent,
+                             Property=Height,
+                             Factor=0.8,
+                             }"
+                         RelativeLayout.XConstraint =
+   "{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.75}">
+
+            </Button>
+            </RelativeLayout>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

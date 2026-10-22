@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quran.Zikr"
+             Padding="20"
+               xmlns:local="clr-namespace:Quran;assembly=Quran"
+           BackgroundImageSource="azkarback.jpg"
+            >
+     <ContentPage.ToolbarItems BarBackgroundColor="0E8192" >
+        <ToolbarItem  Text="الاذكار" />
+        <ToolbarItem  Icon="list.png"/>
+     </ContentPage.ToolbarItems>
+    
+        <ContentPage.Content >
+        <StackLayout>
+            <CollectionView x:Name="CSpecialAzlkar"  VerticalOptions="Center" HorizontalOptions="Center">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" HorizontalItemSpacing="20" VerticalItemSpacing="40"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Grid.Row="1"  HasShadow="False" BackgroundColor="White"  CornerRadius="10" Padding="10"  VerticalOptions="Start">
+                            <StackLayout Spacing="20">
+                                <Label Text="{Binding name}" TextColor="Black" FontSize="20" FontAttributes="Bold " HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                                <Label Text="{Binding Benifit}" TextColor="#2C7648" FontSize="15"  FontAttributes="Bold " HorizontalTextAlignment="Center" VerticalOptions="Center"/>
+                                <Button Text="{Binding Count}" BackgroundColor="#03A841" TextColor="White" CornerRadius="20" x:Name="AltasbihNO"  CommandParameter="{Binding id}" Clicked="AltasbihNO_Clicked"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+        
+            </CollectionView>
+            <local:AdBanner HeightRequest="62" BackgroundColor="White" Size="Standardbanner" VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quran.App">
+    <Application.Resources>
+
+        <ResourceDictionary>
+
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS1Bold">
+                <On Platform="Android" Value="ArbFONTS-Al-QuranAlKareem-Bold.ttf#ArbFONTS" />
+                <On Platform="IOS" Value="ArbFONTS-Al-QuranAlKareem-Bold.ttf#ArbFONTS" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS1">
+                <On Platform="Android" Value="ArbFONTS-Al-QuranAlKareem.ttf#ArbFONTS" />
+                <On Platform="IOS" Value="ArbFONTS-Al-QuranAlKareem.ttf#ArbFONTS" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS2Bold">
+                <On Platform="Android" Value="ArbFONTS-HSDream-Bold.otf#ArbFONTS" />
+                <On Platform="IOS" Value="ArbFONTS-HSDream-Bold.otf#ArbFONTS" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS2Light">
+                <On Platform="Android" Value="ArbFONTS-HSDream-Light.otf#ArbFONTS" />
+                <On Platform="IOS" Value="ArbFONTS-HSDream-Light.otf#ArbFONTS" />
+                
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS2Medium">
+                <On Platform="Android" Value="ArbFONTS-HSDream-Medium.otf#ArbFONTS" />
+                <On Platform="IOS" Value="ArbFONTS-HSDream-Medium.otf#ArbFONTS" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS3BoldItalic1">
+                <On Platform="Android" Value="ArbFONTS-Thulth-Bold-Italic-1.ttf#ArbFONTS" />
+                <On Platform="IOS" Value="ArbFONTS-Thulth-Bold-Italic-1.ttf#ArbFONTS" />
+            </OnPlatform> 
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS3BoldItalic">
+                <On Platform="Android" Value="ArbFONTS-Thulth-Bold-Italic.ttf#ArbFONTS" />
+                <On Platform="IOS" Value="ArbFONTS-Thulth-Bold-Italic.ttf#ArbFONTS" />
+            </OnPlatform> 
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS3Bold">
+                <On Platform="Android" Value="ArbFONTS-Thulth-Bold.ttf#ArbFONTS" />
+                <On Platform="IOS" Value="ArbFONTS-Thulth-Bold.ttf#ArbFONTS" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS3Italic">
+                <On Platform="Android" Value="ArbFONTS-Thulth-Italic.ttf#ArbFONTS" />
+                <On Platform="IOS" Value="ArbFONTS-Thulth-Italic.ttf#ArbFONTS" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS4">
+                <On Platform="Android" Value="MADDINA.ttf#MADDINA" />
+                <On Platform="IOS" Value="MADDINA.ttf#MADDINA" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS5">
+                <On Platform="Android" Value="mcs_gf1.ttf#mcs_gf1" />
+                <On Platform="IOS" Value="mcs_gf1.ttf#mcs_gf1" />
+            </OnPlatform>
+            <OnPlatform x:TypeArguments="x:String" x:Key="ArbFONTS6">
+                <On Platform="Android" Value="ReemKufi-Regular.tff#ReemKufi" />
+                <On Platform="IOS" Value="ReemKufi-Regular.tff#ReemKufi" />
+            </OnPlatform>
+           
+            <Style TargetType="Label">
+                <!--<Setter Property="FontFamily" Value="{StaticResource }" />-->
+                <Setter Property="FontSize" Value="16" />
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

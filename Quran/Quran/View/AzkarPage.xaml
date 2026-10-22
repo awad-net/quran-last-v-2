@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                            xmlns:local="clr-namespace:Quran;assembly=Quran"
+
+             x:Class="Quran.AzkarPage"
+             >
+     <ContentPage.ToolbarItems BarBackgroundColor="0E8192" >
+                <ToolbarItem  Text="الأذكار"/>
+      
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView x:Name="CAzkarlst" SelectionMode="Single" Margin="10" SelectionChanged="CAzkarlst_SelectionChanged">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout  Orientation="Vertical" VerticalItemSpacing="20"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Frame BackgroundColor="#D6ECE1" HasShadow="False">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding name}" TextColor="Black" Grid.Column="1" FontSize="20" VerticalOptions="Center"/>
+                                </Grid>
+                            </Frame>
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <local:AdBanner HeightRequest="62" BackgroundColor="White" Size="Standardbanner" VerticalOptions="EndAndExpand"/>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

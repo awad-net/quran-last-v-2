@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+                            xmlns:local="clr-namespace:Quran;assembly=Quran"
+
+             x:Class="Quran.downloaded">
+
+    <NavigationPage.TitleView>
+        <AbsoluteLayout>
+
+            <Label  Margin="10,0,10,100" AbsoluteLayout.LayoutBounds="1,0,150,150" AbsoluteLayout.LayoutFlags="PositionProportional" VerticalTextAlignment="Center" Text="حسام فرج الله " TextColor="White" x:Name="lblTitle" HorizontalOptions="EndAndExpand" VerticalOptions="CenterAndExpand"/>
+            <Label Margin="0,10,0,0" AbsoluteLayout.LayoutBounds="0,0,50,50" AbsoluteLayout.LayoutFlags="PositionProportional" HorizontalTextAlignment="Center" BackgroundColor="Transparent" Text="الرجوع"   TextColor="White" HorizontalOptions="StartAndExpand">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ToolbarItem_Clicked"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+
+        </AbsoluteLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <local:AdBanner HeightRequest="62" BackgroundColor="White" Size="Standardbanner" VerticalOptions="EndAndExpand"/>
+
+            <AbsoluteLayout>
+                <Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+
+
+                    <ScrollView Grid.Row="0" x:Name="scrollViewVisable"  >
+                        
+                            <StackLayout>
+
+                                <Label FontFamily="{StaticResource ArbFONTS5}" HorizontalTextAlignment="Center" TextColor="Black" FontSize="15"  x:Name="suraname"/>
+                                <Label FontFamily="{StaticResource ArbFONTS1}" HorizontalTextAlignment="Center" TextColor="Black" FontSize="15" x:Name="surat"></Label>
+
+                                <StackLayout x:Name="StackLayoutMap1"  Padding="20" >
+
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+
+                        <CollectionView Grid.Row="0" EmptyView="لا يوجد تحميلات" HeightRequest="420" SelectionChanged="Cdownloadlst_SelectionChanged" SelectionMode="Single" x:Name="Cdownloadlst">
+                            <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical" ItemSpacing="0"/>
+                            </CollectionView.ItemsLayout>
+                            <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Frame  CornerRadius="10"  VerticalOptions="Center" Margin="0,10,0,0" HorizontalOptions="Center" WidthRequest="250" HasShadow="False">
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"/>
+                                                    <RowDefinition Height="*"/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <Label Grid.Row="0" Text="{Binding name}" FontFamily="{StaticResource ArbFONTS2Medium}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" TextColor="Black" Grid.Column="0" VerticalTextAlignment="Center"/>
+                                                <Label Grid.Row="1" Text="{Binding Ename}" FontFamily="{StaticResource ArbFONTS2Medium}" HorizontalOptions="Center" VerticalOptions="Center" FontSize="20" TextColor="#2C7648" Grid.Column="0" VerticalTextAlignment="Center"/>
+
+
+
+                                        </Grid>
+                                        </Frame>
+
+                                    </Grid>
+                                </DataTemplate>
+                            </CollectionView.ItemTemplate>
+                        </CollectionView>
+
+                        <Grid Grid.Row="1">
+
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="4*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Frame CornerRadius="50" Grid.Row="0" x:Name="AduioStack" HasShadow="False" Grid.Column="1" Margin="0,0,0,0" >
+                                <StackLayout >
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="0:0:0" FontSize="10" x:Name="lblMinValue" HorizontalOptions="Start" WidthRequest="40"/>
+                                        <Slider x:Name="SliderPostion"  ValueChanged="SliderPostion_ValueChanged" HorizontalOptions="Start" WidthRequest="160" MinimumTrackColor="#00D2D8" ThumbColor="#00D2D8"/>
+                                        <Label Text="0:0:0" FontSize="10" x:Name="lblMaxValue" HorizontalOptions="End" WidthRequest="40" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal"  Margin="0,0,20,0" >
+                                        <controls:CircleImage x:Name="imgShie" Aspect="AspectFill" >
+                                            <controls:CircleImage.WidthRequest>
+                                                <OnPlatform x:TypeArguments="x:Double">
+                                                    <On Platform="Android, iOS">50</On>
+                                                    <On Platform="WinPhone">50</On>
+                                                </OnPlatform>
+                                            </controls:CircleImage.WidthRequest>
+                                            <controls:CircleImage.HeightRequest>
+                                                <OnPlatform x:TypeArguments="x:Double">
+                                                    <On Platform="Android, iOS">70</On>
+                                                    <On Platform="WinPhone">70</On>
+                                                </OnPlatform>
+                                            </controls:CircleImage.HeightRequest>
+                                        </controls:CircleImage>
+                                        <ImageButton x:Name="prev" BackgroundColor="Transparent" Clicked="prev_Clicked" Source="skip.png" HorizontalOptions="Start" WidthRequest="20" />
+                                        <ImageButton  x:Name="play" Source="play.png"  Clicked="play_Clicked"   HorizontalOptions="Center"  Margin="10,0,10,0" WidthRequest="60" BackgroundColor="Transparent" />
+                                        <ImageButton   x:Name="next" Source="prev.png" Clicked="next_Clicked"  HorizontalOptions="Start" WidthRequest="20"    BackgroundColor="Transparent"   />
+                                        <ImageButton  Margin="10,0,0,0"  x:Name="stop" Source="stop.png"  Clicked="stop_Clicked"  HorizontalOptions="Center"   WidthRequest="30" BackgroundColor="Transparent"  />
+
+
+
+                                </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+
+
+                   
+                 
+
+                </Grid>
+           
+            
+          
+
+
+            <Frame BackgroundColor="White" x:Name="MenuPopUp"  IsVisible="False" AbsoluteLayout.LayoutBounds="0,0.5,60,180" CornerRadius="30" HasShadow="True"
+                       AbsoluteLayout.LayoutFlags="PositionProportional">
+                <StackLayout>
+                    <ImageButton  Source="incress.png" x:Name="btnIncress"  BackgroundColor="Transparent"   HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="40" HeightRequest="40" 
+                              Clicked="btnIncress_Clicked" />
+                    <ImageButton  Source="decrease.png" x:Name="btnDecres"  BackgroundColor="Transparent"   HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="40" HeightRequest="40" 
+                              Clicked="btnDecres_Clicked" />
+                    <ImageButton  Source="btnBack.png"  BackgroundColor="Transparent"   HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="40" HeightRequest="40" 
+                              Clicked="btnBack_Clicked" />
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="White"  x:Name="backFrame"  IsVisible="False" AbsoluteLayout.LayoutBounds="0,0.7,60,60" CornerRadius="30" HasShadow="True"
+                       AbsoluteLayout.LayoutFlags="PositionProportional">
+                <ImageButton  Source="more.png"  BackgroundColor="Transparent"  x:Name="btnMore"  HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="40" HeightRequest="40" 
+                              Clicked="btnMore_Clicked" />
+            </Frame>
+
+
+             </AbsoluteLayout>
+
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

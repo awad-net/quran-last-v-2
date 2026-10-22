@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+ 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Quran;assembly=Quran"
+             x:Class="Quran.Salaty" BackgroundImage="mawakit.jpg">  
+    <ContentPage.ToolbarItems BarBackgroundColor="0E8192" >
+                <ToolbarItem  Text="اوقات الصلاة"/>
+        <ToolbarItem  Icon="list.png"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+
+        
+        <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="9*"/>
+                </Grid.RowDefinitions>
+                <Grid BackgroundColor="#2EA15A" IsVisible="True" Grid.Row="0"  Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="-- ---- ----" HorizontalOptions="Center" VerticalOptions="Center" x:Name="hijriday" FontSize="12" FontFamily="{StaticResource ArbFONTS2Bold}" TextColor="White" Grid.Row="0" Grid.Column="1"/>
+                    <Label Text="-- ---- ----"  x:Name="timeday" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="12" FontFamily="{StaticResource ArbFONTS2Bold}" TextColor="White" Grid.Row="1" Grid.Column="1"/>
+                    <Label Text="-- ---- ----"  HorizontalOptions="Center" VerticalOptions="Center" x:Name="enghijriday" FontSize="12" FontFamily="{StaticResource ArbFONTS2Bold}" TextColor="White" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="-- ---- ----" x:Name="engtimeday" HorizontalOptions="Center" VerticalOptions="Center" FontSize="12"  FontFamily="{StaticResource ArbFONTS2Bold}" TextColor="White" Grid.Row="1" Grid.Column="0"/>
+                </Grid>
+                <Grid Grid.Row="1">
+                    
+                    
+                    <Grid.RowDefinitions>
+                        
+                        <RowDefinition Height="70"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                    </Grid.RowDefinitions>
+
+                <Image Source="backsalah.png" Aspect="AspectFill"/>
+                     <StackLayout Grid.Row="1" VerticalOptions="Center">
+                        <Label  HorizontalOptions="Center" TextColor="#2EA15A" FontSize="23" FontFamily="{StaticResource ArbFONTS2Medium}"  Text="الصلاة القادمة"  ></Label>
+
+                        <Label x:Name="timepray" HorizontalOptions="Center" TextColor="Black" FontSize="27"  FontFamily="{StaticResource ArbFONTS2Medium}" Text="3:50 pm"  />
+
+                        <Label x:Name="timeout" HorizontalOptions="Center" TextColor="Black" FontSize="17" Text="00:00:00"   />
+
+                        <Label x:Name="textpray" HorizontalOptions="Center" TextColor="Black" FontSize="19"  FontFamily="{StaticResource ArbFONTS2Medium}" Text="الفجر"  />
+
+                    </StackLayout>
+                <!--//ArbFONTS2Bold-->
+
+                <ScrollView Grid.Row="2" Margin="0,0,0,0">
+                        <StackLayout  Margin="0,-10,0,0">
+                            <Frame x:Name="AlFajer" Margin="0" HeightRequest="20" BackgroundColor="Transparent" >
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                <Label x:Name="_loc2" HorizontalOptions="Center" Grid.Row="0"  TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="الفجر"  Grid.Column="1" ></Label>
+                                <Label x:Name="loc2" HorizontalOptions="Center" TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="--:-- pm"  Grid.Column="0" ></Label>
+                                    <Image x:Name="image1" Source="speakerOf.png" Grid.Column="2" />
+                                </Grid>
+                            </Frame>
+                            <Frame x:Name="sunrise" HeightRequest="20" BackgroundColor="Transparent" >
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                <Label x:Name="_loc0" HorizontalOptions="Center" Grid.Row="0"  TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="الشروق"  Grid.Column="1" ></Label>
+                                <Label x:Name="loc0" HorizontalOptions="Center" TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="--:-- pm"  Grid.Column="0" ></Label>
+                                    <Image  Source="speakerOf.png" Grid.Column="2" />
+                                </Grid>
+                            </Frame>
+                            <Frame x:Name="Al"  HeightRequest="20" BackgroundColor="Transparent" >
+                                <Grid>
+
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                <Label x:Name="_loc4" HorizontalOptions="Center"  TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="الظهر"  Grid.Column="1" ></Label>
+                                <Label x:Name="loc4" HorizontalOptions="Center" TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="--:-- pm"  Grid.Column="0" ></Label>
+                                    <Image x:Name="image2" Source="speakerOf.png" Grid.Column="2" />
+
+                                </Grid>
+                            </Frame>
+                            <Frame x:Name="Aleasr"  HeightRequest="20" BackgroundColor="Transparent" >
+                                <Grid>
+
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                <Label x:Name="_loc5" HorizontalOptions="Center"  TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="العصر"  Grid.Column="1" ></Label>
+                                <Label x:Name="loc5" HorizontalOptions="Center" TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="--:-- pm"  Grid.Column="0" ></Label>
+                                    <Image x:Name="image3" Source="speakerOf.png" Grid.Column="2" />
+
+                                </Grid>
+                            </Frame>
+                            <Frame x:Name="Almaghrib"  HeightRequest="20" BackgroundColor="Transparent"  >
+                                <Grid>
+
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                <Label x:Name="_loc6" HorizontalOptions="Center"  TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="المغرب"  Grid.Column="1" ></Label>
+                                <Label x:Name="loc6" HorizontalOptions="Center" TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="--:-- pm"  Grid.Column="0" ></Label>
+                                    <Image x:Name="image4" Source="speakerOf.png" Grid.Column="2" />
+
+                                </Grid>
+                            </Frame>
+                            <Frame x:Name="Al3saa"  HeightRequest="20" BackgroundColor="Transparent"  >
+                                <Grid>
+
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="30"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label x:Name="_loc7" HorizontalOptions="Center"  TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="العشاء"  Grid.Column="1" ></Label>
+                                    <Label x:Name="loc7" HorizontalOptions="Center" TextColor="Black" FontFamily="{StaticResource ArbFONTS2Light}" FontSize="17" Text="--:-- pm"  Grid.Column="0" ></Label>
+                                    <Image x:Name="image5" Source="speakerOf.png" Grid.Column="2" />
+
+                                </Grid>
+                            </Frame>
+                        </StackLayout>
+
+                    </ScrollView>
+
+                </Grid>
+
+            </Grid>
+
+        <local:AdBanner HeightRequest="62" BackgroundColor="White" Size="Standardbanner" VerticalOptions="EndAndExpand"/>
+
+    </StackLayout>
+  
+</ContentPage>

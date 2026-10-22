@@ -1,0 +1,106 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="abdulbasit-abdulsamad.jpg" />
+    <None Remove="Azkar.txt" />
+    <None Remove="quran-simple-en.txt" />
+    <None Remove="quran-simple.txt" />
+    <None Remove="quran-simple.xml" />
+    <None Remove="quran.xml" />
+    <None Remove="quranname.txt" />
+    <None Remove="xml\quran.xml" />
+    <None Remove="quran.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="abdulbasit-abdulsamad.jpg" />
+    <EmbeddedResource Include="Azkar.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quran-simple-en.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quran-simple.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quran-simple.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quranname.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="xml\quran.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quran.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Plugin.Compass" Version="3.0.1" />
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1" />
+    <PackageReference Include="SlideOverKit" Version="2.1.6.2" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.6.2-beta" />
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer" Version="1.4.0" />
+    <PackageReference Include="Xam.Plugins.Forms.ImageCircle" Version="3.1.1.1-beta" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.1" />
+    <PackageReference Include="DownloadManager" Version="0.1.0-beta" />
+    <PackageReference Include="Plugin.MediaManager" Version="0.9.8-alpha1" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="Xam.Plugins.Vibrate" Version="4.0.0.5" />
+    <PackageReference Include="MediaManager.Unofficial" Version="1.1.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.616-pre4" />
+
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Sebha.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="View\right.xaml.cs">
+      <DependentUpon>right.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="View\Salaty.xaml.cs">
+      <DependentUpon>Salaty.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="View\AddSabhaPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\playdownloaded.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="View\salaty.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="View\AddSabhaPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="xml\" />
+  </ItemGroup>
+</Project>
